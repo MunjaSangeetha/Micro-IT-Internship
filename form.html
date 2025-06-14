@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offer Letter Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Offer Letter Generator</h2>
+    <form action="http://127.0.0.1:5000/generate-offer-letter" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required>
+
+        <label for="joining_date">Joining Date:</label>
+        <input type="text" id="joining_date" name="joining_date" placeholder="e.g. 14 June 2025" required>
+
+        <label for="salary">Salary (₹):</label>
+        <input type="text" id="salary" name="salary" required>
+
+        <input type="submit" value="Generate Offer Letter">
+    </form>
+
+</body>
+</html>
